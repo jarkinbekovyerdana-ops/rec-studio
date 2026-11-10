@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rec Studio — видеомонтаж в Алматы: креативы для таргета, еске алу, юбилей, уроки, ИИ</title>
+<meta name="description" content="Rec Studio — студия видеомонтажа в Алматы. Рекламные креативы для таргета, видео на еске алу и юбилей, монтаж уроков и подкастов, моушн и ИИ-видео. От 4 000 ₸ за минуту, 1–2 дня, 2 правки бесплатно.">
+<meta name="keywords" content="видеомонтаж Алматы, монтаж видео, еске алу видео, поминальное видео, слайд-шоу на юбилей, мерей той, креативы для таргета, монтаж рекламы, ИИ озвучка видео, ИИ видео, моушн дизайн, монтаж видеоуроков, монтаж подкастов, нарезка подкастов на Reels, корпоративные рилсы, UGC креативы, 3D текст, LED баннер, бейнемонтаж">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rec Studio">
+<meta property="og:title" content="Rec Studio — видеомонтаж в Алматы">
+<meta property="og:description" content="Креативы для таргета, еске алу и юбилей, уроки и подкасты, ИИ-видео. От 4 000 ₸ за минуту, готово за 1–2 дня.">
+<meta property="og:image" content="https://jarkinbekovyerdana-ops.github.io/rec-studio/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F5F6F3">
+<link rel="canonical" href="https://jarkinbekovyerdana-ops.github.io/rec-studio/">
+<meta property="og:url" content="https://jarkinbekovyerdana-ops.github.io/rec-studio/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Rec Studio","alternateName":"Рек Студио","description":"Студия видеомонтажа: рекламные креативы, еске алу и юбилей, видеоуроки и подкасты, моушн и ИИ-видео.","telephone":"+77716828254","address":{"@type":"PostalAddress","addressLocality":"Алматы","addressCountry":"KZ"},"areaServed":["Алматы","Казахстан"],"availableLanguage":["ru","kk","en"],"priceRange":"от 4000 ₸"}
+</script>
+<style>
+:root{
+  --paper:#F5F6F3; --surface:#FFFFFF; --ink:#16181B; --muted:#5B606A; --line:#DDE0DA;
+  --rec:#E0442E; --rec-ink:#FFFFFF; --blue:#2556D6; --tape:#16181B; --tape-hole:#F5F6F3;
+  --wa:#1FAF55; --shadow:0 18px 50px -24px rgba(22,24,27,.35);
+  --disp:"Unbounded",system-ui,sans-serif; --body:"Golos Text",Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --maxw:1180px;
+}
+[data-theme="dark"]{
+  --paper:#121315; --surface:#1B1D20; --ink:#EDEEEA; --muted:#9AA0A8; --line:#2C2F33;
+  --rec:#FF5A43; --blue:#7FA2FF; --tape:#050506; --tape-hole:#2C2F33; --shadow:0 18px 50px -24px rgba(0,0,0,.8);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .3s,color .3s}
+a{color:inherit}
+img,video{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--disp);font-weight:700;letter-spacing:-.02em;line-height:1.08}
+h2{font-size:clamp(28px,4vw,44px);margin-bottom:14px}
+.sub{color:var(--muted);max-width:60ch}
+section{padding:88px 0}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:16px;border:1.5px solid transparent;cursor:pointer;text-decoration:none;transition:transform .15s ease,box-shadow .2s ease,background .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-rec{background:var(--rec);color:var(--rec-ink);box-shadow:0 10px 26px -10px var(--rec)}
+.btn-rec:hover{box-shadow:0 14px 34px -10px var(--rec)}
+.btn-line{border-color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-tg{background:#2AA5E0;color:#fff}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr{display:flex;align-items:center;gap:20px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--disp);font-weight:700;font-size:19px;letter-spacing:-.01em}
+.logo{gap:9px;font-size:20px;letter-spacing:-.02em}
+.logo b{font-weight:700}
+.lname{font-weight:500}
+.ldot{width:14px;height:14px;border-radius:50%;background:var(--rec);box-shadow:0 0 0 5px color-mix(in srgb,var(--rec) 22%,transparent);animation:blink 1.6s infinite;flex:none}
+nav.main{display:flex;gap:24px;margin-left:auto;font-size:15px}
+nav.main a{text-decoration:none;color:var(--muted)}
+nav.main a:hover{color:var(--ink)}
+.tools{display:flex;align-items:center;gap:8px;margin-left:12px}
+.seg{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface)}
+.seg button{background:none;border:0;padding:6px 10px;border-radius:999px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.icon-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer;transition:transform .2s}
+.icon-btn:hover{transform:rotate(-12deg)}
+.icon-btn svg{width:18px;height:18px}
+.hdr .btn{padding:10px 16px;font-size:14px}
+.burger{display:none}
+.mnav{display:none}
+
+/* hero */
+.hero{padding:64px 0 0}
+.hero h1{font-size:clamp(36px,6.4vw,78px);max-width:13ch}
+.hero .lead{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:52ch;margin:22px 0 30px}
+.hero-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.facts{display:flex;flex-wrap:wrap;gap:26px;margin-top:34px;font-size:15px;color:var(--muted)}
+.facts b{display:block;font-family:var(--disp);font-weight:500;font-size:22px;color:var(--ink);letter-spacing:-.01em}
+.rec-dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--rec);margin-right:8px;animation:blink 1.6s infinite;vertical-align:1px}
+@keyframes blink{50%{opacity:.25}}
+.hero-top{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.reel-btn{display:flex;align-items:center;gap:14px;border:1px solid var(--line);background:var(--surface);border-radius:20px;padding:12px 18px 12px 12px;cursor:pointer;text-align:left;box-shadow:var(--shadow);transition:transform .2s}
+.reel-btn:hover{transform:translateY(-3px)}
+.reel-btn .ph{width:54px;height:96px;border-radius:12px;background:var(--tape);display:grid;place-items:center;overflow:hidden;position:relative}
+.reel-btn .ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75}
+.reel-btn .ph svg{position:relative;width:22px;height:22px;color:#fff}
+.reel-btn small{display:block;color:var(--muted);font-size:13px}
+.reel-btn strong{font-size:15px}
+
+/* segment picker */
+.pick-t{font-weight:600;margin:26px 0 10px;font-size:15px;color:var(--muted)}
+.pick{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:26px}
+.pick a{display:flex;flex-direction:column;gap:6px;background:var(--surface);text-decoration:none;transition:transform .15s,box-shadow .2s;min-width:0}
+.pick a:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.pick a:active{transform:scale(.98)}
+.pick b{font-size:16px;line-height:1.25}
+.pick span{font-size:14px;color:var(--muted);line-height:1.35}
+.pick i{font-style:normal;font-size:13px;font-weight:600;color:var(--c);margin-top:auto;padding-top:4px}
+/* film strip */
+.strip{margin-top:56px;background:var(--tape);padding:26px 0;position:relative;overflow:hidden}
+.strip::before,.strip::after{content:"";position:absolute;left:0;right:0;height:12px;background:repeating-linear-gradient(90deg,var(--tape-hole) 0 16px,transparent 16px 34px);opacity:.9}
+.strip::before{top:7px}.strip::after{bottom:7px}
+.reel{display:flex;gap:14px;width:max-content;animation:roll 60s linear infinite}
+.strip:hover .reel{animation-play-state:paused}
+@keyframes roll{to{transform:translateX(-50%)}}
+.frame{position:relative;height:300px;border-radius:10px;overflow:hidden;cursor:pointer;flex:none;background:#000;border:0;padding:0}
+.frame.v{aspect-ratio:9/16}.frame.h{aspect-ratio:16/9}
+.frame video,.frame img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.frame:hover video{transform:scale(1.05)}
+.frame .cap{position:absolute;left:10px;right:10px;bottom:10px;color:#fff;font-size:13px;font-weight:600;text-shadow:0 1px 8px rgba(0,0,0,.7);text-align:left;opacity:0;transform:translateY(6px);transition:.25s}
+.frame:hover .cap,.frame:focus-visible .cap{opacity:1;transform:none}
+.strip-note{color:var(--muted);font-size:14px;margin-top:12px}
+
+/* directions */
+.dirs{margin-top:40px;border-top:1px solid var(--line)}
+.dir{display:grid;grid-template-columns:72px 1.1fr 1.4fr auto;gap:28px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);position:relative}
+.dir .ic{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;background:var(--c);color:#fff;transition:transform .25s}
+.dir:hover .ic{transform:rotate(-8deg) scale(1.06)}
+.dir .ic svg{width:28px;height:28px}
+.dir h3{font-size:clamp(20px,2.2vw,26px)}
+.dir p{color:var(--muted);margin-top:6px;font-size:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:14px;padding:6px 12px;border-radius:999px;background:color-mix(in srgb,var(--c) 12%,var(--surface));border:1px solid color-mix(in srgb,var(--c) 30%,var(--line))}
+.dir .go{font-weight:600;color:var(--c);text-decoration:none;white-space:nowrap;padding:10px 0}
+.dir .offer{margin-top:12px;font-size:15px;font-weight:500;color:var(--ink);padding:10px 14px;border-radius:12px;background:color-mix(in srgb,var(--c) 9%,var(--surface));border-left:3px solid var(--c)}
+.dir .side{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.dir .want{padding:11px 18px;font-size:15px}
+.pl .want{position:absolute;top:10px;left:10px;z-index:2;padding:9px 14px;font-size:14px;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+.dir.hl{animation:hl 1.6s ease}
+@keyframes hl{0%,60%{border-color:var(--rec);box-shadow:var(--glow)}}
+/* единый стиль направлений: нейтральные карточки, один акцент */
+:root{--glow:0 0 0 1px color-mix(in srgb,var(--rec) 55%,transparent),0 16px 44px -18px color-mix(in srgb,var(--rec) 60%,transparent)}
+.pick{counter-reset:pk}
+.pick a{border:1.5px solid var(--line);border-radius:18px;padding:16px 16px 14px;position:relative;transition:transform .2s ease,box-shadow .25s ease,border-color .2s}
+.pick a::before{counter-increment:pk;content:"0" counter(pk);font-family:var(--disp);font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.04em}
+.pick a:hover,.pick a:focus-visible{transform:translateY(-4px);border-color:var(--rec);box-shadow:var(--glow)}
+.pick b{color:var(--ink)}
+.pick i{color:var(--ink);display:flex;align-items:center;gap:6px}
+.pick a:hover i{color:var(--rec)}
+.dirs{border-top:0;display:grid;gap:14px}
+.dir{background:var(--surface);border:1.5px solid var(--line);border-radius:22px;padding:26px 28px;transition:transform .2s ease,box-shadow .25s ease,border-color .2s}
+.dir:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--rec) 70%,var(--line));box-shadow:var(--glow)}
+.dir .ic{background:var(--paper);color:var(--ink);border:1.5px solid var(--line);transition:transform .25s,background .2s,color .2s,border-color .2s}
+.dir:hover .ic{background:var(--rec);color:#fff;border-color:var(--rec);transform:rotate(-6deg) scale(1.05)}
+.dir .offer{background:var(--paper);border-left:3px solid var(--rec);font-weight:600}
+.tags span{background:var(--paper);border:1px solid var(--line);color:var(--ink)}
+.dir .go{color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--line)}
+.dir .go:hover{color:var(--rec);text-decoration-color:var(--rec)}
+.card .k,.ask .k{color:var(--muted)!important;text-transform:uppercase;letter-spacing:.05em;font-size:11px!important}
+.card{border-width:1.5px}
+.card:hover{border-color:color-mix(in srgb,var(--rec) 70%,var(--line));box-shadow:var(--glow)}
+.minis button:hover{border-color:var(--rec)}
+/* цвет: второй акцент и маркер для триггерных слов */
+:root{--mark:#FFD84D;--acc:#2556D6;--tint:#FFF3EE}
+[data-theme="dark"]{--mark:#8A6A00;--acc:#8FB0FF;--tint:#241A18}
+mark{background:linear-gradient(transparent 52%,var(--mark) 52%);color:inherit;padding:0 2px;border-radius:2px;font-weight:600}
+.hero{position:relative;background:radial-gradient(900px 420px at 88% -8%,color-mix(in srgb,var(--rec) 16%,transparent),transparent 70%),radial-gradient(700px 380px at -10% 30%,color-mix(in srgb,var(--mark) 22%,transparent),transparent 70%)}
+.hero h1 em{font-style:normal;color:var(--rec)}
+.hero .lead{color:var(--ink)}
+.facts b{color:var(--rec)}
+h2{position:relative;padding-top:18px}
+h2::before{content:"";position:absolute;top:0;left:0;width:54px;height:5px;border-radius:5px;background:linear-gradient(90deg,var(--rec),var(--mark))}
+.pick a{background:linear-gradient(180deg,var(--tint),var(--surface) 70%);border-color:color-mix(in srgb,var(--rec) 28%,var(--line))}
+.pick a::before{color:var(--rec);font-weight:700;font-size:13px}
+.pick i{color:var(--acc)}
+.pick span{color:var(--ink);opacity:.82}
+.dirs{counter-reset:dr}
+.dir h3::before{counter-increment:dr;content:"0" counter(dr);display:block;font-size:13px;color:var(--rec);letter-spacing:.06em;margin-bottom:6px}
+.dir{border-color:color-mix(in srgb,var(--rec) 22%,var(--line))}
+.dir .ic{background:var(--tint);color:var(--rec);border-color:color-mix(in srgb,var(--rec) 30%,var(--line))}
+.dir .offer{background:var(--tint)}
+.dir p{color:color-mix(in srgb,var(--ink) 78%,var(--muted))}
+.dir .go{color:var(--acc);text-decoration-color:color-mix(in srgb,var(--acc) 40%,transparent)}
+.tags span:first-child{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--rec);border-color:var(--rec);color:#fff}
+.pbig{color:var(--rec)}
+.price .pbox:first-child{border:1.5px solid color-mix(in srgb,var(--rec) 45%,var(--line));background:linear-gradient(180deg,var(--tint),var(--surface) 60%)}
+.step .n{color:var(--rec);font-weight:700}
+summary:hover{color:var(--rec)}
+details[open] summary{color:var(--rec)}
+.contact{border:1.5px solid color-mix(in srgb,var(--rec) 35%,var(--line));background:linear-gradient(160deg,var(--tint),var(--surface) 45%)}
+.minis{display:flex;gap:6px}
+.minis button{width:46px;aspect-ratio:9/16;border-radius:8px;overflow:hidden;border:1px solid var(--line);padding:0;cursor:pointer;background:#000;transition:transform .2s}
+.minis button:hover{transform:translateY(-3px)}
+.minis img{width:100%;height:100%;object-fit:cover}
+.dir .go:hover{text-decoration:underline}
+
+/* works */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 24px}
+.filters button{border:1px solid var(--line);background:var(--surface);padding:9px 16px;border-radius:999px;cursor:pointer;font-size:15px;color:var(--muted);transition:.2s}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:start;grid-auto-flow:row dense}
+.card{min-width:0;width:100%;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;text-align:left;cursor:pointer;padding:0;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card.wide{grid-column:span 2}
+.card .media{position:relative;background:#000;aspect-ratio:9/16}
+.card.wide .media{aspect-ratio:16/9}
+.card video,.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card .play{position:absolute;right:12px;bottom:12px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;transition:transform .2s}
+.card:hover .play{transform:scale(1.12)}
+.card .play svg{width:16px;height:16px;margin-left:2px;color:#111}
+.card .meta{padding:14px 16px 16px}
+.card .k{font-size:13px;font-weight:600;color:var(--c)}
+.card h3{font-family:var(--body);font-weight:600;font-size:16px;letter-spacing:0;line-height:1.35;margin-top:4px}
+.card .d{font-size:14px;color:var(--muted);margin-top:4px}
+.ask{border:1.5px dashed var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;min-height:220px;background:transparent}
+.ask h3{font-family:var(--body);font-size:17px;font-weight:600;letter-spacing:0}
+.ask p{color:var(--muted);font-size:15px}
+.ask .btn{align-self:flex-start;padding:11px 18px;font-size:15px;white-space:normal;text-align:center}
+.ask{min-width:0}
+
+/* before / after */
+.ba-wrap{display:grid;grid-template-columns:1fr 360px;gap:56px;align-items:center}
+.ba{position:relative;aspect-ratio:9/16;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);user-select:none;touch-action:pan-y;max-width:360px;justify-self:center;width:100%}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .after{clip-path:inset(0 0 0 var(--p,50%))}
+.ba .bar{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;background:#fff;transform:translateX(-50%);pointer-events:none}
+.ba .knob{position:absolute;top:50%;left:var(--p,50%);width:46px;height:46px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.35);pointer-events:none;color:#111}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize}
+.ba .lbl{position:absolute;top:12px;font-size:12px;font-weight:600;color:#fff;background:rgba(0,0,0,.55);padding:5px 10px;border-radius:999px}
+.ba .l1{left:12px}.ba .l2{right:12px}
+.ba-list{margin-top:22px;display:grid;gap:12px;list-style:none}
+.ba-list li{display:flex;gap:12px;align-items:flex-start}
+.ba-list li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--rec);margin-top:9px}
+
+/* pricing + calc */
+.price{display:grid;grid-template-columns:1fr 1.15fr;gap:24px;margin-top:36px}
+.pbox{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:32px}
+.pbig{font-family:var(--disp);font-weight:700;font-size:clamp(44px,6vw,68px);letter-spacing:-.03em;line-height:1}
+.pbox .unit{color:var(--muted);margin-top:8px}
+.inc{list-style:none;display:grid;gap:10px;margin-top:24px}
+.inc li{display:flex;gap:10px}
+.inc svg{flex:none;width:20px;height:20px;color:var(--wa);margin-top:3px}
+.calc label.row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+.calc select,.calc input[type=number]{font:inherit;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--ink);max-width:220px}
+.calc input[type=range]{width:100%;accent-color:var(--rec);margin-top:10px}
+.calc .chk{display:flex;align-items:center;gap:10px;padding:10px 0;cursor:pointer}
+.calc .chk input{width:20px;height:20px;accent-color:var(--rec)}
+.calc .chk span small{color:var(--muted);display:block;font-size:13px}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin:22px 0 16px}
+.total b{font-family:var(--disp);font-size:34px;letter-spacing:-.02em}
+.calc .note{font-size:13px;color:var(--muted);margin-top:12px}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:40px;border-top:2px solid var(--ink)}
+.step{padding:22px 20px 0 0;position:relative}
+.step::before{content:"";position:absolute;top:-8px;left:0;width:14px;height:14px;border-radius:50%;background:var(--paper);border:2px solid var(--ink)}
+.step:first-child::before{background:var(--rec);border-color:var(--rec)}
+.step .n{font-family:var(--disp);font-size:14px;color:var(--muted)}
+.step h3{font-family:var(--body);font-size:18px;font-weight:600;letter-spacing:0;margin:6px 0}
+.step p{color:var(--muted);font-size:15px}
+.rule{margin-top:40px;background:color-mix(in srgb,var(--rec) 9%,var(--surface));border:1px solid color-mix(in srgb,var(--rec) 30%,var(--line));border-radius:20px;padding:24px 28px;display:flex;gap:18px}
+.rule svg{flex:none;width:28px;height:28px;color:var(--rec)}
+.rule h3{font-family:var(--body);font-size:18px;font-weight:600;letter-spacing:0;margin-bottom:4px}
+.rule p{color:var(--muted)}
+
+/* faq */
+.faq{max-width:820px;margin-top:28px}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 44px 20px 0;font-weight:600;font-size:18px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:8px;top:50%;width:12px;height:12px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-70%) rotate(45deg);transition:transform .25s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{color:var(--muted);padding:0 0 20px;max-width:68ch}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:48px;box-shadow:var(--shadow)}
+.contact .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.vcard{display:flex;gap:18px;align-items:center;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+#qr{width:104px;height:104px;background:#fff;padding:6px;border-radius:12px;flex:none}
+#qr img,#qr canvas{width:100%!important;height:100%!important}
+.vcard p{font-size:14px;color:var(--muted)}
+.vcard a{font-weight:600}
+form{display:grid;gap:14px;align-content:start}
+form label{display:grid;gap:6px;font-size:14px;color:var(--muted)}
+form input,form select,form textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:var(--paper);color:var(--ink);width:100%}
+form textarea{min-height:110px;resize:vertical}
+form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--blue)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fnote{font-size:13px;color:var(--muted)}
+
+footer{padding:40px 0 70px;color:var(--muted);font-size:14px}
+.foot{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;border-top:1px solid var(--line);padding-top:24px}
+footer a{color:var(--muted)}
+
+.bbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.bbar .btn{padding:13px 14px;font-size:15px}
+.bbar .btn-wa{flex:2}.bbar .btn-line{flex:1}
+
+/* player */
+dialog{border:0;padding:0;background:transparent;max-width:min(92vw,980px);max-height:92vh;margin:auto}
+dialog::backdrop{background:rgba(10,10,12,.82);backdrop-filter:blur(4px)}
+.pl{position:relative;background:#000;border-radius:16px;overflow:hidden}
+.pl video,.pl iframe{display:block;max-height:86vh;max-width:min(92vw,980px);width:100%;border:0}
+.pl.v video,.pl.v iframe{width:auto;height:86vh;aspect-ratio:9/16;max-width:92vw}
+.pl.h iframe{aspect-ratio:16/9;height:auto}
+.x{position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.9);color:#111;cursor:pointer;font-size:22px;line-height:1;z-index:2}
+
+@media (max-width:1040px){
+  nav.main{display:none}
+  .tools{margin-left:auto}
+  .burger{display:grid}
+  .hdr .btn-wa{display:none}
+  .mnav.open{display:grid;padding:6px 22px 18px;border-top:1px solid var(--line);background:var(--paper)}
+  .mnav a{padding:13px 0;font-size:18px;text-decoration:none;border-bottom:1px solid var(--line)}
+  .hero-top{grid-template-columns:1fr}
+  .dir{grid-template-columns:60px 1fr;gap:16px 18px}
+  .dir .tags,.dir .go,.dir .side{grid-column:2}
+  .dir{grid-template-columns:52px minmax(0,1fr);padding:20px 18px;border-radius:20px}
+  .dir .ic{width:52px;height:52px;border-radius:15px;align-self:start}
+  .dir .side{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ba-wrap,.price,.contact{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;border-top:0;border-left:2px solid var(--ink);margin-left:6px}
+  .step{padding:0 0 24px 24px}
+  .step::before{top:2px;left:-8px}
+  .bbar{display:flex}
+  body{padding-bottom:72px}
+  .pick{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (hover:none){#qr,.qrhint{display:none}}
+@media (max-width:600px){
+  body{font-size:16px}
+  section{padding:64px 0}
+  .hero{padding-top:36px}
+  .hero-row .btn{flex:1 1 100%}
+  .pick{gap:8px}.pick a{padding:12px 12px 10px}.pick b{font-size:15px}.pick span{font-size:13px}
+  .dir .side{align-items:stretch}.dir .want{flex:1 1 100%}
+  .facts{gap:18px}
+  .frame{height:230px}
+  .grid{gap:12px}
+  .card .meta{padding:10px 12px 12px}
+  .card h3{font-size:14px}
+  .card .d{display:none}
+  .ask{grid-column:span 2;min-height:0}
+  .contact{padding:26px 18px;border-radius:22px}
+  .two{grid-template-columns:1fr}
+  .pbox{padding:24px 20px}
+  .logo{font-size:18px}
+  .seg button{padding:6px 7px}
+  .hdr{gap:10px}
+  .tools{gap:6px;margin-left:auto}
+  .icon-btn{width:36px;height:36px}
+}
+@media (max-width:380px){.logo{font-size:17px}.seg button{padding:5px 6px;font-size:12px}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hdr">
+    <a class="logo" href="#top" aria-label="Rec Studio"><span class="ldot" aria-hidden="true"></span><span class="lname"><b>Rec</b> Studio</span></a>
+    <nav class="main" aria-label="Разделы">
+      <a href="#napravleniya" data-i="nav.dirs"></a>
+      <a href="#raboty" data-i="nav.works"></a>
+      <a href="#ceny" data-i="nav.prices"></a>
+      <a href="#process" data-i="nav.process"></a>
+      <a href="#faq" data-i="nav.faq"></a>
+    </nav>
+    <div class="tools">
+      <div class="seg" role="group" aria-label="Язык / Тіл / Language">
+        <button data-lang="ru">RU</button><button data-lang="kk">KZ</button><button data-lang="en">EN</button>
+      </div>
+      <button class="icon-btn" id="theme" aria-label="Тема"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path id="themeIcon" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg></button>
+      <a class="btn btn-wa js-wa" href="#kontakty"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.7-.4Z"/></svg>WhatsApp</a>
+      <button class="icon-btn burger" id="burger" aria-label="Меню" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Меню">
+    <a href="#napravleniya" data-i="nav.dirs"></a><a href="#raboty" data-i="nav.works"></a><a href="#ceny" data-i="nav.prices"></a><a href="#process" data-i="nav.process"></a><a href="#faq" data-i="nav.faq"></a><a href="#kontakty" data-i="nav.contact"></a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <p class="sub" style="font-weight:600;color:var(--ink)"><span class="rec-dot" aria-hidden="true"></span><span data-i="hero.where"></span></p>
+        <h1 data-i="hero.title" style="margin-top:14px"></h1>
+        <p class="lead" data-i="hero.lead"></p>
+        <p class="pick-t" data-i="pick.t"></p>
+        <div class="pick" id="pick"></div>
+        <div class="hero-row">
+          <a class="btn btn-rec js-wa" href="#kontakty"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.7-.4Z"/></svg><span data-i="cta.wa"></span></a>
+          <a class="btn btn-line" href="#ceny" data-i="cta.calc"></a>
+        </div>
+        <div class="facts">
+          <div><b data-i="f1.b"></b><span data-i="f1.t"></span></div>
+          <div><b data-i="f2.b"></b><span data-i="f2.t"></span></div>
+          <div><b data-i="f3.b"></b><span data-i="f3.t"></span></div>
+        </div>
+      </div>
+      <button class="reel-btn" id="reelBtn" hidden>
+        <span class="ph"><video src="media/hook-loop.mp4" muted loop playsinline autoplay></video><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span><small data-i="reel.s"></small><strong data-i="reel.t"></strong></span>
+      </button>
+    </div>
+  </div>
+  <div class="strip" aria-label="Фрагменты работ">
+    <div class="reel" id="reel"></div>
+  </div>
+  <div class="wrap"><p class="strip-note" data-i="strip.note"></p></div>
+</section>
+
+<section id="napravleniya">
+  <div class="wrap">
+    <h2 data-i="dirs.t"></h2>
+    <p class="sub" data-i="dirs.s"></p>
+    <div class="dirs" id="dirs"></div>
+  </div>
+</section>
+
+<section id="raboty" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <h2 data-i="works.t"></h2>
+    <p class="sub" data-i="works.s"></p>
+    <div class="filters" id="filters" role="group"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="do-posle">
+  <div class="wrap ba-wrap">
+    <div>
+      <h2 data-i="ba.t"></h2>
+      <p class="sub" data-i="ba.s"></p>
+      <ul class="ba-list" data-list="ba.l"></ul>
+    </div>
+    <div class="ba" id="ba" style="--p:50%">
+      <img src="media/before.jpg" alt="" data-alt="ba.l1">
+      <img class="after" src="media/after.jpg" alt="" data-alt="ba.l2">
+      <span class="lbl l1" data-i="ba.l1"></span><span class="lbl l2" data-i="ba.l2"></span>
+      <span class="bar"></span><span class="knob"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+      <input type="range" min="0" max="100" value="50" aria-label="До / после">
+    </div>
+  </div>
+</section>
+
+<section id="ceny" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <h2 data-i="price.t"></h2>
+    <p class="sub" data-i="price.s"></p>
+    <div class="price">
+      <div class="pbox">
+        <span class="unit" data-i="price.from"></span>
+        <div class="pbig">4 000 ₸</div>
+        <p class="unit" data-i="price.unit"></p>
+        <ul class="inc" data-list="price.inc" data-check></ul>
+      </div>
+      <div class="pbox calc" id="calc">
+        <h3 style="font-size:22px;margin-bottom:6px" data-i="calc.t"></h3>
+        <label class="row"><span data-i="calc.type"></span><select id="cType"></select></label>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line)">
+          <div style="display:flex;justify-content:space-between"><span data-i="calc.min"></span><b id="cMinOut">3</b></div>
+          <input type="range" id="cMin" min="0.5" max="15" step="0.5" value="3" aria-label="Минуты">
+        </div>
+        <label class="chk"><input type="checkbox" id="cSubs"><span><span data-i="calc.subs"></span><small id="cSubsP"></small></span></label>
+        <label class="chk"><input type="checkbox" id="cVoice"><span><span data-i="calc.voice"></span><small id="cVoiceP"></small></span></label>
+        <div class="total"><span data-i="calc.total"></span><b id="cTotal">12 000 ₸</b></div>
+        <button class="btn btn-rec" id="cSend" style="width:100%"><span data-i="calc.send"></span></button>
+        <p class="note" data-i="calc.note"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <h2 data-i="proc.t"></h2>
+    <div class="steps" id="steps"></div>
+    <div class="rule">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+      <div><h3 data-i="rule.t"></h3><p data-i="rule.d"></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <h2 data-i="faq.t"></h2>
+    <div class="faq" id="faqList"></div>
+  </div>
+</section>
+
+<section id="kontakty" style="padding-top:20px">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2 data-i="ct.t"></h2>
+        <p class="sub" data-i="ct.s"></p>
+        <div class="btns">
+          <a class="btn btn-wa js-wa" href="#kontakty"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.7-.4Z"/></svg>WhatsApp</a>
+          <a class="btn btn-tg js-tg" href="#kontakty"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.8 19c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.7 8.6-7.8c.4-.3-.1-.5-.6-.2L7 13l-4.6-1.4c-1-.3-1-1 .2-1.5l17.9-6.9c.8-.3 1.6.2 1.4 1.1Z"/></svg>Telegram</a>
+          <a class="btn btn-line js-ig" href="#kontakty" hidden>Instagram</a>
+        </div>
+        <p style="margin-top:18px;font-size:15px"><b id="phoneTxt"></b> <span class="sub" data-i="ct.where"></span></p>
+        <div class="vcard">
+          <div id="qr" aria-hidden="true"></div>
+          <div>
+            <a class="btn btn-line" href="contact.vcf" download="rec-studio.vcf" style="padding:10px 16px;font-size:15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg><span data-i="ct.vcf"></span></a>
+            <p class="qrhint" style="margin-top:8px" data-i="ct.qr"></p>
+          </div>
+        </div>
+      </div>
+      <form id="brief" novalidate>
+        <label><span data-i="fm.type"></span><select id="fType"></select></label>
+        <div class="two">
+          <label><span data-i="fm.len"></span><input id="fLen" data-ph="fm.len.ph"></label>
+          <label><span data-i="fm.date"></span><input id="fDate" data-ph="fm.date.ph"></label>
+        </div>
+        <label><span data-i="fm.desc"></span><textarea id="fDesc" data-ph="fm.desc.ph"></textarea></label>
+        <button class="btn btn-rec" type="submit" data-i="fm.send"></button>
+        <p class="fnote" data-i="fm.note"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="yr">2026</span> Rec Studio. <span data-i="ft.t"></span></span>
+    <span data-i="ft.k"></span>
+  </div>
+</footer>
+
+<div class="bbar"><a class="btn btn-wa js-wa" href="#kontakty"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.7-.4Z"/></svg><span data-i="bar.wa"></span></a><a class="btn btn-line" href="#ceny" data-i="bar.price"></a></div>
+
+<dialog id="player"><div class="pl" id="pl"><button class="x" id="plx" aria-label="Закрыть">×</button></div></dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+/* ============================ НАСТРОЙКИ ============================
+   Меняйте только этот блок. Ссылки YouTube: берите ID из ссылки
+   youtu.be/ID  или  youtube.com/shorts/ID                              */
+const CONFIG = {
+  whatsapp:  "77716828254",          // номер без + и пробелов
+  phoneText: "+7 771 682 82 54",
+  telegram:  "Yerdana",              // ник без @
+  instagram: "",                     // ник Instagram без @ (пусто — кнопка скрыта)
+  showreel:  "",                     // ID шоурила на YouTube Shorts (пусто — кнопка скрыта)
+  metrika:   "",                     // номер счётчика Яндекс Метрики (пусто — не подключается)
+  calculator: true,                  // false — скрыть калькулятор
+  pricePerMin: 4000,                 // базовая цена за минуту
+  subsPerMin: 1000,                  // доплата за субтитры, ₸/мин (калькулятор)
+  voicePerMin: 1500,                 // доплата за озвучку, ₸/мин (калькулятор)
+  minOrder: 4000                     // минимальный заказ
+};
+/* Работы. seg: ads | memory | edu | motion.  v: true — вертикальное.
+   loop — короткое превью (без звука), file — полный ролик на сайте,
+   yt — ID YouTube (если указан, откроется YouTube вместо файла).       */
+/* Короткая запись для новых работ: W(сегмент, вертикальное?, имя файлов в media/, показывать в ленте?, названия, описания).
+   Ожидает файлы media/ИМЯ.mp4, media/ИМЯ-loop.mp4, media/ИМЯ.jpg. Для YouTube добавьте yt вручную. */
+const W = (seg,v,slug,top,t,d,yt="") => ({seg,v,top,loop:`media/${slug}-loop.mp4`,poster:`media/${slug}.jpg`,file:`media/${slug}.mp4`,yt,t,d});
+const WORKS = [
+  W("edu",1,"podcast-clip",1,
+   {ru:"Подкаст: клип для Reels на казахском",kk:"Подкаст: қазақша Reels клипі",en:"Podcast: Kazakh-language Reels clip"},
+   {ru:"Лучший момент выпуска + вставки и субтитры",kk:"Шығарылымның ең жақсы сәті + қосымшалар мен субтитр",en:"Best moment of the episode + inserts and subtitles"}),
+  W("ads",1,"shapan-look",1,
+   {ru:"Шапаны: лукбук для Instagram",kk:"Шапандар: Instagram-ға лукбук",en:"Shapan coats: Instagram lookbook"},
+   {ru:"Карточки товара в кадре: цвет, ткань, размеры",kk:"Тауар картасы кадрдың ішінде: түсі, матасы, өлшемі",en:"Product cards in frame: colour, fabric, sizes"}),
+  W("motion",1,"track-3d",1,
+   {ru:"3D-трекинг: постеры в воздухе",kk:"3D-трекинг: ауадағы постерлер",en:"3D tracking: posters in mid-air"},
+   {ru:"Графика привязана к руке и комнате",kk:"Графика қол мен бөлмеге байланған",en:"Graphics locked to the hand and room"}),
+  W("ads",1,"corp-invest",1,
+   {ru:"Инвестиционная компания: корпоративный рилс",kk:"Инвестициялық компания: корпоративтік рилс",en:"Investment company: corporate reel"},
+   {ru:"Стоковые кадры, текст по смыслу, фирменный стиль",kk:"Сток кадрлар, мағынаға сай мәтін, фирмалық стиль",en:"Stock footage, synced text, brand style"}),
+  W("ads",1,"target-school",1,
+   {ru:"Языковая школа: креатив для таргета",kk:"Тіл мектебі: таргет креативі",en:"Language school: paid-social creative"},
+   {ru:"Хук в первую секунду, призыв записаться",kk:"Алғашқы секундтағы хук, жазылуға шақыру",en:"Hook in the first second, sign-up CTA"}),
+  W("memory",0,"family-slideshow",1,
+   {ru:"Слайд-шоу из семейного архива",kk:"Отбасылық архивтен слайд-шоу",en:"Slideshow from a family archive"},
+   {ru:"Старые фото оживают: плавные наезды и музыка",kk:"Ескі фотолар жанданады: баяу жақындату және музыка",en:"Old photos come alive: slow pans and music"}),
+  {top:true, seg:"ads",    v:true,  loop:"media/hook-loop.mp4",        poster:"media/hook.jpg",        file:"media/hook.mp4",        yt:"",
+   t:{ru:"Креатив с хуком «5 000 000 ₸»",kk:"«5 000 000 ₸» хугы бар креатив",en:"Hook creative: “5,000,000 ₸”"},
+   d:{ru:"Первые 2 секунды держат зрителя",kk:"Алғашқы 2 секунд көрерменді ұстайды",en:"The first 2 seconds hold attention"}},
+  W("ads",1,"ugc-detergent",1,
+   {ru:"Стиральное средство: UGC-креатив",kk:"Кір жуғыш құрал: UGC-креатив",en:"Detergent: UGC creative"},
+   {ru:"Живая подача, акция и плашки на казахском",kk:"Табиғи көрсетілім, акция мен қазақша плашкалар",en:"Natural delivery, promo and Kazakh captions"}),
+  W("motion",1,"kinetic-text",1,
+   {ru:"Кинетический текст: 3D-камера",kk:"Кинетикалық мәтін: 3D-камера",en:"Kinetic type: 3D camera"},
+   {ru:"Слова летят навстречу зрителю",kk:"Сөздер көрерменге қарай ұшады",en:"Words fly towards the viewer"}),
+  W("ads",1,"shapan-promo",0,
+   {ru:"Шапаны: ролик с ведущей",kk:"Шапандар: жүргізушісі бар ролик",en:"Shapan coats: presenter video"},
+   {ru:"Казахские субтитры, крупные планы ткани",kk:"Қазақша субтитр, матаның жақын планы",en:"Kazakh subtitles, fabric close-ups"}),
+  W("edu",1,"expert-titles",0,
+   {ru:"Экспертное видео: спикер и титры",kk:"Сарапшы бейнесі: спикер және титр",en:"Expert video: speaker and captions"},
+   {ru:"Чистые субтитры, главное выделено цветом",kk:"Таза субтитр, бастысы түспен ерекшеленген",en:"Clean captions, key words in colour"}),
+  {top:false, seg:"ads",    v:true,  loop:"media/remont-loop.mp4",      poster:"media/remont.jpg",      file:"media/remont.mp4",      yt:"",
+   t:{ru:"Ремонт квартир: рекламный ролик",kk:"Пәтер жөндеу: жарнамалық ролик",en:"Apartment renovation: promo"},
+   d:{ru:"Сценарий по ТЗ, субтитры, цвет",kk:"ТТ бойынша сценарий, субтитр, түс",en:"Script to brief, subtitles, grading"}},
+  W("ads",1,"auto-grade",1,
+   {ru:"Автосалон: субтитры и цвет",kk:"Автосалон: субтитр және түс",en:"Car dealer: subtitles and grading"},
+   {ru:"LUT под кино-картинку, казахские субтитры",kk:"Киноға ұқсас LUT, қазақша субтитр",en:"Cinematic LUT, Kazakh subtitles"}),
+  {top:true, seg:"ads",    v:true,  loop:"media/ai-admin-loop.mp4",    poster:"media/ai-admin.jpg",    file:"media/ai-admin.mp4",    yt:"",
+   t:{ru:"ИИ-администратор: креатив для таргета",kk:"ЖИ-әкімші: таргет креативі",en:"AI admin: paid-social creative"},
+   d:{ru:"ИИ-визуал, субтитры, призыв к действию",kk:"ЖИ-визуал, субтитр, әрекетке шақыру",en:"AI visuals, subtitles, call to action"}},
+  W("ads",1,"corp-export",0,
+   {ru:"Экспортное агентство: спикер и титры",kk:"Экспорттық агенттік: спикер және титр",en:"Export agency: speaker and captions"},
+   {ru:"Анимация ключевых слов и цифр",kk:"Негізгі сөздер мен сандардың анимациясы",en:"Animated key words and figures"}),
+  {top:false, seg:"ads",    v:true,  loop:"media/churchkhela-loop.mp4", poster:"media/churchkhela.jpg", file:"media/churchkhela.mp4", yt:"",
+   t:{ru:"Чурчхела: продукт крупным планом",kk:"Чурчхела: өнім жақын планда",en:"Churchkhela: product close-ups"},
+   d:{ru:"Аппетитный монтаж под музыку",kk:"Музыкаға сай тәбет ашар монтаж",en:"Appetising cut to music"}},
+  W("ads",1,"taxi",0,
+   {ru:"Таксопарк: анимированный баннер",kk:"Таксопарк: анимациялық баннер",en:"Taxi fleet: animated banner"},
+   {ru:"Статичная реклама превращается в сторис с движением",kk:"Статикалық жарнама қозғалысы бар сторисқа айналады",en:"A static ad turned into a moving story"}),
+  W("ads",1,"light-reel",0,
+   {ru:"Рилс для блогера: динамичный монтаж",kk:"Блогерге рилс: серпінді монтаж",en:"Creator reel: fast-paced edit"},
+   {ru:"Звуки, зумы и эффекты под каждое слово",kk:"Әр сөзге дыбыс, зум және эффект",en:"Sound, zooms and effects on every word"}),
+  W("motion",1,"text-ring",0,
+   {ru:"3D-кольцо из текста",kk:"Мәтіннен 3D-сақина",en:"3D text ring"},
+   {ru:"Заставка для логотипа или слогана",kk:"Логотип не слоганға арналған заставка",en:"Intro for a logo or slogan"}),
+  {top:true, seg:"motion", v:false, loop:"media/kz-map-loop.mp4",      poster:"media/kz-map.jpg",      file:"media/kz-map.mp4",      yt:"",
+   t:{ru:"Карта Казахстана: моушн для мероприятия",kk:"Қазақстан картасы: іс-шараға моушн",en:"Map of Kazakhstan: event motion"},
+   d:{ru:"Регионы оживают один за другим",kk:"Өңірлер бірінен соң бірі жанданады",en:"Regions light up one by one"}},
+  {top:false, seg:"motion", v:false, loop:"media/ai-host-loop.mp4",     poster:"media/ai-host.jpg",     file:"media/ai-host.mp4",     yt:"",
+   t:{ru:"ИИ-ведущая: видео без съёмок",kk:"ЖИ-жүргізуші: түсірілімсіз бейне",en:"AI presenter: video without a shoot"},
+   d:{ru:"Сгенерированный ведущий и графика",kk:"Генерацияланған жүргізуші мен графика",en:"Generated presenter and graphics"}},
+  W("motion",0,"led-banner",0,
+   {ru:"LED-бегущая строка для мероприятия",kk:"Іс-шараға LED жүгірме жол",en:"LED ticker for an event"},
+   {ru:"Бесшовный цикл под формат экрана",kk:"Экран форматына сай үзіліссіз цикл",en:"Seamless loop sized to the screen"})
+];
+/* =================================================================== */
+
+const DIRS = [
+  {id:"reklama",  seg:"ads",    c:"#E0442E", icon:'<path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/>'},
+  {id:"eske-alu", seg:"memory", c:"#9A6B3F", icon:'<rect x="3" y="5" width="14" height="14" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v12"/><circle cx="8.5" cy="10" r="1.5"/><path d="m17 16-4-4-7 7"/>'},
+  {id:"obuchenie",seg:"edu",    c:"#2556D6", icon:'<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v4M8 21h8"/>'},
+  {id:"motion",   seg:"motion", c:"#6B4FD8", icon:'<path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9Z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8Z"/>'}
+];
+
+const I = {
+ru:{
+ "pick.t":"Что вам нужно? Выберите — покажем примеры и цену:","pick.go":"Примеры и цена","d.ads.h":"Креатив для таргета и Reels — <mark>от 4 000 ₸</mark>, за <mark>1–2 дня</mark>","d.memory.h":"Видео из ваших фото — бережно и к нужной дате","d.edu.h":"Из записи — готовый урок и клипы для Reels","d.motion.h":"3D-текст, LED-экран, ИИ-видео без съёмок","d.ads.m":"Здравствуйте! Нужен рекламный ролик / креатив для таргета.","d.memory.m":"Здравствуйте! Нужно видео на еске алу / юбилей из наших фото.","d.edu.m":"Здравствуйте! Нужно смонтировать урок / подкаст.","d.motion.m":"Здравствуйте! Нужен моушн / ИИ-видео.","want":"Хочу такое же","want.msg":"Здравствуйте! Хочу видео как в работе ","bar.wa":"Написать в WhatsApp","bar.price":"Цены",
+ "nav.dirs":"Услуги","nav.works":"Работы","nav.prices":"Цены","nav.process":"Как работаем","nav.faq":"Вопросы","nav.contact":"Связаться",
+ "hero.where":"Rec Studio — видеомонтаж в Алматы. Онлайн по всему Казахстану",
+ "hero.title":"Монтаж, который <em>досматривают до конца</em>",
+ "hero.lead":"Присылаете материалы в WhatsApp — через <mark>1–2 дня</mark> получаете готовый ролик. <mark>От 4 000 ₸</mark> за минуту, <mark>2 правки бесплатно</mark>.",
+ "cta.wa":"Обсудить видео в WhatsApp","cta.calc":"Рассчитать цену",
+ "f1.b":"от 4 000 ₸","f1.t":"за минуту видео","f2.b":"1–2 дня","f2.t":"обычный срок","f3.b":"2 правки","f3.t":"входят в цену",
+ "reel.s":"30 секунд","reel.t":"Смотреть шоурил",
+ "strip.note":"Это кадры наших работ. Нажмите на любой — откроется ролик.",
+ "dirs.t":"Что мы монтируем","dirs.s":"Четыре направления. У каждого своя ссылка — удобно отправить клиенту или поставить в объявление.",
+ "d.ads.t":"Реклама и креативы","d.ads.p":"Реклама не цепляет? Соберём ролик с хуком в первую секунду, субтитрами и призывом — под Instagram и TikTok.","d.ads.o":"Креатив до 1 минуты — <mark>от 4 000 ₸</mark>. Готов за <mark>1–2 дня</mark>.","d.ads.l":["Креативы 9:16","UGC-креативы","Лукбук одежды","Корпоративные рилсы","Баннеры для сторис","Субтитры и цвет","ИИ-озвучка RU / EN"],
+ "d.memory.t":"Еске алу и юбилей","d.memory.p":"Бережно соберём историю жизни из фото и видео — к еске алу, юбилею или семейному празднику. Успеем к вашей дате.","d.memory.o":"Пришлите фото по порядку — через <mark>1–2 дня</mark> получите слайд-шоу с музыкой и титрами на казахском.","d.memory.l":["Еске алу","Мерей той","Туған күн","Қыз ұзату","Слайд-шоу","Оживление фото"],
+ "d.edu.t":"Уроки и подкасты","d.edu.p":"Записали урок или подкаст, а монтировать некогда? Уберём лишнее, добавим титры — получите урок и клипы для соцсетей.","d.edu.o":"Один выпуск подкаста — серия клипов для Reels с субтитрами. Урок — с плашками, хромакеем и анимацией текста.","d.edu.l":["Видеоуроки","Онлайн-курсы","Хромакей","Подкасты","Клипы для Reels","Экспертные видео"],
+ "d.motion.t":"Моушн и ИИ","d.motion.p":"Нужно эффектно, а снимать нечего? Сделаем 3D-текст, анимацию для LED-экрана или ИИ-видео без съёмок.","d.motion.o":"3D-текст, трекинг, баннеры для LED-экранов и ИИ-визуал — когда снимать дорого или нечего.","d.motion.l":["3D-текст","3D-трекинг","LED-экраны","Карты и инфографика","ИИ-ведущий","ИИ-визуал"],
+ "d.go":"Смотреть примеры",
+ "works.t":"Наши работы","works.s":"Нажмите на ролик, чтобы посмотреть его со звуком.",
+ "flt.all":"Все","flt.ads":"Реклама","flt.memory":"Еске алу и юбилей","flt.edu":"Уроки и подкасты","flt.motion":"Моушн и ИИ",
+ "ask.memory.t":"Ещё примеры еске алу и юбилеев","ask.memory.p":"Многие семейные видео личные — показываем их только в WhatsApp, с согласия семьи.",
+ "ask.edu.t":"Полные уроки и выпуски","ask.edu.p":"Видеоуроки длинные, поэтому пришлём их целиком в WhatsApp — с хромакеем, плашками и анимацией.",
+ "ask.btn":"Попросить примеры","ask.msg":"Здравствуйте! Покажите, пожалуйста, примеры: ",
+ "ba.t":"До и после монтажа","ba.s":"Потяните ползунок. Слева — исходник от клиента, справа — то, что вышло после монтажа.",
+ "ba.l":["Субтитры, которые читаются без звука","Цвет и ритм под формат 9:16","Призыв к действию в конце"],"ba.l1":"Исходник","ba.l2":"После монтажа",
+ "price.t":"Цены","price.s":"Платите за минуту готового видео, а не за часы работы. Точную цену скажем после того, как увидим материалы.",
+ "price.from":"от","price.unit":"за минуту готового видео",
+ "price.inc":["Монтаж, склейка, переходы","Музыка и цветокоррекция","Базовая анимация текста","2 правки после сдачи"],
+ "calc.t":"Примерный расчёт","calc.type":"Что за видео","calc.min":"Длительность, мин","calc.subs":"Субтитры","calc.voice":"ИИ-озвучка (русский, английский)",
+ "calc.total":"Примерно","calc.send":"Отправить расчёт в WhatsApp","calc.note":"Это ориентир. Итоговая цена зависит от объёма материалов и задачи.","calc.per":"₸ за минуту",
+ "types":["Реклама / креатив","Еске алу / юбилей","Урок или подкаст","Моушн / ИИ-видео","Другое"],
+ "proc.t":"Как мы работаем",
+ "steps":[["Заявка","Пишете в WhatsApp, что нужно и к какой дате."],["ТЗ и файлы","Согласуем задачу, цену и срок. Файлы удобно прислать в Telegram."],["Монтаж","Обычно 1–2 дня, большие проекты — до 3 дней."],["Правки","Две правки бесплатно после сдачи по ТЗ."],["Готово","Отправляем файл в нужном формате."]],
+ "rule.t":"Про правки — честно и заранее","rule.d":"В цену входят 2 круга правок после сдачи работы по ТЗ. Каждый следующий круг — +50% к стоимости заказа. Новые идеи, которых не было в ТЗ, считаем отдельно.",
+ "faq.t":"Частые вопросы",
+ "faq":[["Сколько стоит видео?","От 4 000 ₸ за минуту готового видео. Например, ролик на 3 минуты — от 12 000 ₸. Точную цену назовём, когда увидим материалы."],
+        ["Как быстро будет готово?","Обычно за 1–2 дня, большие проекты — до 3 дней. Срок договариваемся до начала работы."],
+        ["Что прислать для еске алу или юбилея?","Фото и видео по порядку, имя и даты, пожелания по музыке и тексту. Всё можно отправить в Telegram или WhatsApp."],
+        ["Можно на казахском?","Да. Титры и субтитры делаем на казахском, русском и английском. Озвучка — ИИ-голосом на русском и английском; казахской озвучки пока нет."],["А если результат не понравится?","В цену входят 2 правки: скажете, что поменять, — исправим. ТЗ согласуем до старта, чтобы не было сюрпризов."],["У меня мало материалов. Получится?","Да. Хватит нескольких фото или видео с телефона: дополним титрами, стоковыми кадрами или ИИ-визуалом."],["Нужно срочно. Успеете?","Напишите дату в WhatsApp — сразу честно ответим, успеем ли. Короткие ролики часто сдаём за 1 день."],
+        ["Вы снимаете?","Мы монтируем. Снимите на телефон или камеру — остальное сделаем мы."]],
+ "ct.t":"Расскажите, какое видео нужно","ct.s":"Ответим, сколько это будет стоить и когда будет готово.","ct.where":"— Алматы, работаем онлайн",
+ "ct.vcf":"Сохранить контакт","ct.qr":"Наведите камеру на QR-код, чтобы открыть сайт на телефоне.",
+ "fm.type":"Что нужно","fm.len":"Длительность","fm.len.ph":"например, 1 минута","fm.date":"К какой дате","fm.date.ph":"например, к пятнице",
+ "fm.desc":"Коротко о задаче","fm.desc.ph":"Что за видео, сколько материалов, есть ли примеры",
+ "fm.send":"Отправить в WhatsApp","fm.note":"Откроется WhatsApp с готовым сообщением — останется нажать «Отправить».",
+ "wa.hi":"Здравствуйте! Хочу заказать видео.","wa.type":"Что нужно","wa.len":"Длительность","wa.date":"Срок","wa.desc":"Задача","wa.calc":"Расчёт на сайте",
+ "ft.t":"Видеомонтаж в Алматы.","ft.k":"Еске алу, юбилей, креативы для таргета, уроки, подкасты, ИИ-видео"
+},
+kk:{
+ "pick.t":"Сізге не керек? Таңдаңыз — мысал мен бағаны көрсетеміз:","pick.go":"Мысал және баға","d.ads.h":"Таргет пен Reels креативі — <mark>4 000 ₸-ден</mark>, <mark>1–2 күнде</mark>","d.memory.h":"Фотоларыңыздан бейне — ұқыпты әрі күніне дайын","d.edu.h":"Жазбадан — дайын сабақ және Reels клиптері","d.motion.h":"3D-мәтін, LED-экран, түсірілімсіз ЖИ-бейне","d.ads.m":"Сәлеметсіз бе! Жарнамалық ролик / таргет креативі керек.","d.memory.m":"Сәлеметсіз бе! Фотоларымыздан еске алу / мерейтой бейнесі керек.","d.edu.m":"Сәлеметсіз бе! Сабақ / подкаст монтаждау керек.","d.motion.m":"Сәлеметсіз бе! Моушн / ЖИ-бейне керек.","want":"Маған да осындай керек","want.msg":"Сәлеметсіз бе! Мына жұмыс сияқты бейне керек: ","bar.wa":"WhatsApp-қа жазу","bar.price":"Бағалар",
+ "nav.dirs":"Қызметтер","nav.works":"Жұмыстар","nav.prices":"Бағалар","nav.process":"Жұмыс тәртібі","nav.faq":"Сұрақтар","nav.contact":"Байланыс",
+ "hero.where":"Rec Studio — Алматыдағы бейнемонтаж. Бүкіл Қазақстан бойынша онлайн",
+ "hero.title":"<em>Соңына дейін</em> көретін монтаж",
+ "hero.lead":"Материалды WhatsApp-қа жібересіз — <mark>1–2 күнде</mark> дайын ролик аласыз. Минутына <mark>4 000 ₸-ден</mark>, <mark>2 түзету тегін</mark>.",
+ "cta.wa":"WhatsApp-та талқылау","cta.calc":"Бағаны есептеу",
+ "f1.b":"4 000 ₸-ден","f1.t":"бейненің бір минуты","f2.b":"1–2 күн","f2.t":"әдеттегі мерзім","f3.b":"2 түзету","f3.t":"бағаға кіреді",
+ "reel.s":"30 секунд","reel.t":"Шоурилді көру",
+ "strip.note":"Бұл — біздің жұмыстардан кадрлар. Кез келгенін басыңыз — ролик ашылады.",
+ "dirs.t":"Нені монтаждаймыз","dirs.s":"Төрт бағыт. Әрқайсысының өз сілтемесі бар — клиентке жіберуге немесе хабарландыруға қоюға ыңғайлы.",
+ "d.ads.t":"Жарнама және креатив","d.ads.p":"Жарнамаңыз көз тартпай ма? Алғашқы секундтан ұстайтын, субтитрі мен шақыруы бар ролик жасаймыз — Instagram мен TikTok-қа.","d.ads.o":"1 минутқа дейінгі креатив — <mark>4 000 ₸-ден</mark>. <mark>1–2 күнде</mark> дайын.","d.ads.l":["9:16 креативтер","UGC-креативтер","Киім лукбугы","Корпоративтік рилстер","Сторис баннерлері","Субтитр және түс","ЖИ-дауыс RU / EN"],
+ "d.memory.t":"Еске алу және мерейтой","d.memory.p":"Фото мен бейнеден өмір жолын ұқыпты құрастырамыз — еске алуға, мерейтойға, отбасылық мерекеге. Күніне үлгереміз.","d.memory.o":"Фотоларды ретімен жіберіңіз — <mark>1–2 күнде</mark> музыкасы мен қазақша титрі бар слайд-шоу аласыз.","d.memory.l":["Еске алу","Мерей той","Туған күн","Қыз ұзату","Слайд-шоу","Фотоны жандандыру"],
+ "d.edu.t":"Сабақтар мен подкасттар","d.edu.p":"Сабақ не подкаст жаздыңыз, монтажға уақыт жоқ па? Артығын алып, титр қосамыз — дайын сабақ пен желіге клиптер аласыз.","d.edu.o":"Подкасттың бір шығарылымы — субтитрі бар Reels клиптерінің сериясы. Сабақ — плашка, хромакей және мәтін анимациясымен.","d.edu.l":["Бейнесабақтар","Онлайн-курстар","Хромакей","Подкасттар","Reels клиптері","Сарапшы бейнелері"],
+ "d.motion.t":"Моушн және ЖИ","d.motion.p":"Әсерлі болу керек, бірақ түсіретін ештеңе жоқ па? 3D-мәтін, LED-экранға анимация немесе түсірілімсіз ЖИ-бейне жасаймыз.","d.motion.o":"3D-мәтін, трекинг, LED-экранға баннер және ЖИ-визуал — түсіру қымбат немесе түсіретін ештеңе жоқ кезде.","d.motion.l":["3D-мәтін","3D-трекинг","LED-экрандар","Карта және инфографика","ЖИ-жүргізуші","ЖИ-визуал"],
+ "d.go":"Мысалдарды көру",
+ "works.t":"Біздің жұмыстар","works.s":"Роликті дыбыспен көру үшін оны басыңыз.",
+ "flt.all":"Барлығы","flt.ads":"Жарнама","flt.memory":"Еске алу, мерейтой","flt.edu":"Сабақ, подкаст","flt.motion":"Моушн және ЖИ",
+ "ask.memory.t":"Еске алу мен мерейтойдың басқа мысалдары","ask.memory.p":"Отбасылық бейнелердің көбі жеке — оларды тек WhatsApp-та, отбасының келісімімен көрсетеміз.",
+ "ask.edu.t":"Толық сабақтар мен шығарылымдар","ask.edu.p":"Бейнесабақтар ұзын, сондықтан WhatsApp-қа толығымен жібереміз — хромакей, плашка және анимациямен.",
+ "ask.btn":"Мысал сұрау","ask.msg":"Сәлеметсіз бе! Мына мысалдарды көрсетіңізші: ",
+ "ba.t":"Монтажға дейін және кейін","ba.s":"Сырғытпаны жылжытыңыз. Солда — клиенттің бастапқы видеосы, оңда — монтаждан кейінгі нәтиже.",
+ "ba.l":["Дыбыссыз оқылатын субтитрлер","9:16 форматына сай түс пен ырғақ","Соңында әрекетке шақыру"],"ba.l1":"Бастапқы","ba.l2":"Монтаждан кейін",
+ "price.t":"Бағалар","price.s":"Жұмыс сағаты үшін емес, дайын бейненің минуты үшін төлейсіз. Нақты бағаны материалды көргеннен кейін айтамыз.",
+ "price.from":"бастап","price.unit":"дайын бейненің бір минуты үшін",
+ "price.inc":["Монтаж, желімдеу, ауысулар","Музыка және түс түзету","Мәтіннің негізгі анимациясы","Тапсырғаннан кейін 2 түзету"],
+ "calc.t":"Шамамен есеп","calc.type":"Қандай бейне","calc.min":"Ұзақтығы, мин","calc.subs":"Субтитрлер","calc.voice":"ЖИ-дауыс (орысша, ағылшынша)",
+ "calc.total":"Шамамен","calc.send":"Есепті WhatsApp-қа жіберу","calc.note":"Бұл — бағдар. Соңғы баға материал көлемі мен тапсырмаға байланысты.","calc.per":"₸ / минут",
+ "types":["Жарнама / креатив","Еске алу / мерейтой","Сабақ немесе подкаст","Моушн / ЖИ-бейне","Басқа"],
+ "proc.t":"Қалай жұмыс істейміз",
+ "steps":[["Өтінім","WhatsApp-қа не керек екенін және қай күнге екенін жазасыз."],["ТТ және файлдар","Тапсырманы, бағаны, мерзімді келісеміз. Файлдарды Telegram арқылы жіберген ыңғайлы."],["Монтаж","Әдетте 1–2 күн, үлкен жобалар — 3 күнге дейін."],["Түзетулер","ТТ бойынша тапсырғаннан кейін екі түзету тегін."],["Дайын","Файлды қажетті форматта жібереміз."]],
+ "rule.t":"Түзетулер туралы — алдын ала және ашық","rule.d":"Бағаға ТТ бойынша тапсырғаннан кейінгі 2 түзету кезеңі кіреді. Әрбір келесі кезең — тапсырыс құнына +50%. ТТ-да болмаған жаңа идеялар бөлек есептеледі.",
+ "faq.t":"Жиі қойылатын сұрақтар",
+ "faq":[["Бейне қанша тұрады?","Дайын бейненің бір минуты 4 000 ₸-ден. Мысалы, 3 минуттық ролик — 12 000 ₸-ден. Нақты бағаны материалды көргенде айтамыз."],
+        ["Қаншалықты тез дайын болады?","Әдетте 1–2 күнде, үлкен жобалар — 3 күнге дейін. Мерзімді жұмыс басталмай тұрып келісеміз."],
+        ["Еске алу немесе мерейтойға не жіберу керек?","Ретімен фото мен бейнелер, есімі мен даталары, музыка мен мәтін бойынша тілектер. Барлығын Telegram немесе WhatsApp арқылы жіберуге болады."],
+        ["Қазақша жасауға бола ма?","Иә. Титр мен субтитрді қазақ, орыс, ағылшын тілдерінде жасаймыз. Дауыс — ЖИ арқылы орыс және ағылшын тілдерінде; қазақша дауыс әзірге жоқ."],["Нәтиже ұнамаса ше?","Бағаға 2 түзету кіреді: нені өзгерту керегін айтасыз — түзетеміз. ТТ-ны жұмыс басталмай тұрып келісеміз."],["Материалым аз. Бола ма?","Иә. Телефонмен түсірілген бірнеше фото не бейне жеткілікті: титр, сток кадр немесе ЖИ-визуал қосамыз."],["Шұғыл керек. Үлгересіздер ме?","Күнін WhatsApp-қа жазыңыз — үлгеретінімізді бірден ашық айтамыз. Қысқа роликтерді көбіне 1 күнде тапсырамыз."],
+        ["Түсіресіздер ме?","Біз монтаждаймыз. Телефонға немесе камераға түсіріңіз — қалғанын біз жасаймыз."]],
+ "ct.t":"Қандай бейне керек екенін айтыңыз","ct.s":"Қанша тұратынын және қашан дайын болатынын айтамыз.","ct.where":"— Алматы, онлайн жұмыс істейміз",
+ "ct.vcf":"Контактіні сақтау","ct.qr":"Сайтты телефонда ашу үшін камераны QR-кодқа бағыттаңыз.",
+ "fm.type":"Не керек","fm.len":"Ұзақтығы","fm.len.ph":"мысалы, 1 минут","fm.date":"Қай күнге","fm.date.ph":"мысалы, жұмаға дейін",
+ "fm.desc":"Тапсырма туралы қысқаша","fm.desc.ph":"Қандай бейне, қанша материал, мысал бар ма",
+ "fm.send":"WhatsApp-қа жіберу","fm.note":"WhatsApp дайын хабарламамен ашылады — тек «Жіберу» батырмасын басыңыз.",
+ "wa.hi":"Сәлеметсіз бе! Бейне тапсырыс бергім келеді.","wa.type":"Не керек","wa.len":"Ұзақтығы","wa.date":"Мерзімі","wa.desc":"Тапсырма","wa.calc":"Сайттағы есеп",
+ "ft.t":"Алматыдағы бейнемонтаж.","ft.k":"Еске алу, мерейтой, таргет креативтері, сабақтар, подкасттар, ЖИ-бейнелер"
+},
+en:{
+ "pick.t":"What do you need? Pick one to see examples and price:","pick.go":"Examples & price","d.ads.h":"Ad creatives & Reels — <mark>from 4,000 ₸</mark>, in <mark>1–2 days</mark>","d.memory.h":"A film from your photos — made with care, on time","d.edu.h":"From a recording to a finished lesson and Reels","d.motion.h":"3D type, LED screens, AI video without a shoot","d.ads.m":"Hello! I need an ad video / paid-social creative.","d.memory.m":"Hello! I need a memorial / anniversary video from our photos.","d.edu.m":"Hello! I need a lesson / podcast edited.","d.motion.m":"Hello! I need motion design / an AI video.","want":"I want one like this","want.msg":"Hello! I'd like a video like ","bar.wa":"Message on WhatsApp","bar.price":"Pricing",
+ "nav.dirs":"Services","nav.works":"Work","nav.prices":"Pricing","nav.process":"Process","nav.faq":"FAQ","nav.contact":"Contact",
+ "hero.where":"Rec Studio — video editing in Almaty. Online across Kazakhstan and beyond",
+ "hero.title":"Edits people watch <em>to the very end</em>",
+ "hero.lead":"Send your footage on WhatsApp — get a finished video in <mark>1–2 days</mark>. <mark>From 4,000 ₸</mark> per minute, <mark>2 free revisions</mark>.",
+ "cta.wa":"Discuss on WhatsApp","cta.calc":"Estimate the price",
+ "f1.b":"from 4,000 ₸","f1.t":"per minute of video","f2.b":"1–2 days","f2.t":"typical turnaround","f3.b":"2 revisions","f3.t":"included",
+ "reel.s":"30 seconds","reel.t":"Watch the showreel",
+ "strip.note":"These are frames from our work. Tap any of them to watch.",
+ "dirs.t":"What we edit","dirs.s":"Four directions, each with its own link — easy to send to a client or put in an ad.",
+ "d.ads.t":"Ads & creatives","d.ads.p":"Ads not landing? We build a video with a hook in the first second, subtitles and a call to action — for Instagram and TikTok.","d.ads.o":"A creative up to 1 minute — <mark>from 4,000 ₸</mark>. Ready in <mark>1–2 days</mark>.","d.ads.l":["9:16 creatives","UGC creatives","Fashion lookbooks","Corporate reels","Story banners","Subtitles & grading","AI voice-over RU / EN"],
+ "d.memory.t":"Memorials & anniversaries","d.memory.p":"We carefully turn photos and videos into a life story — for remembrance, anniversaries and family celebrations. Ready by your date.","d.memory.o":"Send photos in order — in <mark>1–2 days</mark> you get a slideshow with music and Kazakh titles.","d.memory.l":["Eske alu","Anniversary","Birthday","Qyz uzatu","Slideshow","Photo animation"],
+ "d.edu.t":"Lessons & podcasts","d.edu.p":"Recorded a lesson or podcast but no time to edit? We cut the fluff and add titles — you get a lesson and clips for social.","d.edu.o":"One podcast episode becomes a series of subtitled Reels. Lessons get lower thirds, chroma key and text animation.","d.edu.l":["Video lessons","Online courses","Chroma key","Podcasts","Reels clips","Expert videos"],
+ "d.motion.t":"Motion & AI","d.motion.p":"Need impact but nothing to film? We make 3D type, LED-screen animation or AI video without a shoot.","d.motion.o":"3D type, tracking, LED-screen banners and AI visuals — when a shoot is expensive or there's nothing to film.","d.motion.l":["3D type","3D tracking","LED screens","Maps & infographics","AI presenter","AI visuals"],
+ "d.go":"See examples",
+ "works.t":"Our work","works.s":"Tap a video to watch it with sound.",
+ "flt.all":"All","flt.ads":"Ads","flt.memory":"Memorials","flt.edu":"Lessons & podcasts","flt.motion":"Motion & AI",
+ "ask.memory.t":"More memorial & anniversary examples","ask.memory.p":"Many family videos are private — we share them only on WhatsApp, with the family's consent.",
+ "ask.edu.t":"Full lessons and episodes","ask.edu.p":"Lessons are long, so we'll send them in full on WhatsApp — with chroma key, lower thirds and animation.",
+ "ask.btn":"Ask for examples","ask.msg":"Hello! Could you show me examples of: ",
+ "ba.t":"Before and after","ba.s":"Drag the slider. Left — the client's raw footage, right — the result after editing.",
+ "ba.l":["Subtitles readable without sound","Colour and pacing for 9:16","A call to action at the end"],"ba.l1":"Raw","ba.l2":"Edited",
+ "price.t":"Pricing","price.s":"You pay per minute of finished video, not per hour. We'll give an exact quote once we see your materials.",
+ "price.from":"from","price.unit":"per minute of finished video",
+ "price.inc":["Editing, cuts, transitions","Music and colour grading","Basic text animation","2 revisions after delivery"],
+ "calc.t":"Quick estimate","calc.type":"Type of video","calc.min":"Length, min","calc.subs":"Subtitles","calc.voice":"AI voice-over (Russian, English)",
+ "calc.total":"About","calc.send":"Send estimate via WhatsApp","calc.note":"This is a guide. The final price depends on the materials and the task.","calc.per":"₸ per minute",
+ "types":["Ad / creative","Memorial / anniversary","Lesson or podcast","Motion / AI video","Other"],
+ "proc.t":"How we work",
+ "steps":[["Request","Message us on WhatsApp: what you need and by when."],["Brief & files","We agree on the task, price and deadline. Send files via Telegram."],["Editing","Usually 1–2 days, bigger projects up to 3 days."],["Revisions","Two free revisions after delivery to the brief."],["Done","You get the file in the format you need."]],
+ "rule.t":"Revisions — honest and upfront","rule.d":"The price includes 2 rounds of revisions after delivery to the brief. Each extra round is +50% of the order price. New ideas outside the brief are quoted separately.",
+ "faq.t":"Questions",
+ "faq":[["How much does a video cost?","From 4,000 ₸ per minute of finished video. A 3-minute video starts at 12,000 ₸. We'll quote exactly once we see the materials."],
+        ["How fast?","Usually 1–2 days, bigger projects up to 3 days. We agree on the deadline before we start."],
+        ["What do you need for a memorial or anniversary video?","Photos and videos in order, name and dates, wishes for music and text. Send it all via Telegram or WhatsApp."],
+        ["Can it be in Kazakh?","Yes. Titles and subtitles in Kazakh, Russian and English. Voice-over is AI voice in Russian and English; Kazakh voice-over isn't available yet."],["What if I don't like the result?","Two revisions are included: tell us what to change and we fix it. We agree on the brief before we start."],["I don't have much footage. Will it work?","Yes. A few phone photos or clips are enough: we add titles, stock footage or AI visuals."],["I need it urgently. Can you make it?","Send the date on WhatsApp and we'll tell you honestly right away. Short videos are often done in 1 day."],
+        ["Do you shoot?","We edit. Shoot on your phone or camera — we'll do the rest."]],
+ "ct.t":"Tell us what video you need","ct.s":"We'll tell you how much it costs and when it'll be ready.","ct.where":"— Almaty, working online",
+ "ct.vcf":"Save contact","ct.qr":"Point your camera at the QR code to open the site on your phone.",
+ "fm.type":"What you need","fm.len":"Length","fm.len.ph":"e.g. 1 minute","fm.date":"Deadline","fm.date.ph":"e.g. by Friday",
+ "fm.desc":"About the task","fm.desc.ph":"What video, how much footage, any examples",
+ "fm.send":"Send via WhatsApp","fm.note":"WhatsApp opens with a ready message — just press Send.",
+ "wa.hi":"Hello! I'd like to order a video.","wa.type":"Need","wa.len":"Length","wa.date":"Deadline","wa.desc":"Task","wa.calc":"Estimate from the site",
+ "ft.t":"Video editing in Almaty.","ft.k":"Memorials, anniversaries, ad creatives, lessons, podcasts, AI video"
+}};
+
+/* ---------- state ---------- */
+const store = { get(k){ try{return localStorage.getItem(k)}catch(e){return null} }, set(k,v){ try{localStorage.setItem(k,v)}catch(e){} } };
+let lang = store.get("bt-lang"); if(!I[lang]) lang = "ru";
+let theme = store.get("bt-theme") || "light";
+let filter = "all";
+const t = k => I[lang][k] ?? I.ru[k];
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const fmt = n => n.toLocaleString("ru-RU").replace(/ /g," ") + " ₸";
+const CAN_EMBED = !/claude|anthropic|usercontent/i.test(location.hostname);
+const wa = txt => "https://wa.me/" + CONFIG.whatsapp + (txt ? "?text=" + encodeURIComponent(txt) : "");
+/* Аналитика: цели уходят в Яндекс Метрику (CONFIG.metrika). Без счётчика ничего не отправляется. */
+function track(goal){ try{ if (CONFIG.metrika && window.ym) ym(Number(CONFIG.metrika), "reachGoal", goal); }catch(e){} }
+document.addEventListener("click", e => {
+  const el = e.target.closest("a,button"); if (!el || el.dataset.nt) return;
+  const href = el.getAttribute("href") || "";
+  const where = el.closest(".bbar") ? "bar" : el.closest(".pl") ? "player" : el.closest(".dir") ? "dir_" + el.closest(".dir").id : el.closest(".ask") ? "ask" : el.closest("header") ? "header" : el.closest(".hero") ? "hero" : el.closest("#kontakty") ? "contact" : "other";
+  if (href.includes("wa.me")) { track("wa_click"); track("wa_" + where); }
+  else if (href.includes("t.me")) track("tg_click");
+  else if (href.includes("instagram.com")) track("ig_click");
+  else if (el.closest("#pick")) track("pick_" + el.dataset.f);
+  else if (el.closest("#filters")) track("filter_" + el.dataset.f);
+  else if (el.matches(".card,.frame,.minis button")) track("video_open");
+  else if (el.dataset.lang) track("lang_" + el.dataset.lang);
+  else if (href === "#ceny") track("price_open");
+  else if (href === "contact.vcf") track("vcf_save");
+});
+function openExt(url){ const a=document.createElement("a"); a.dataset.nt="1"; a.href=url; a.target="_blank"; a.rel="noopener"; document.body.appendChild(a); a.click(); a.remove(); }
+const PLAY = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>';
+const SEGC = {ads:"#E0442E",memory:"#9A6B3F",edu:"#2556D6",motion:"#6B4FD8"};
+
+/* ---------- theme ---------- */
+function applyTheme(){
+  document.documentElement.dataset.theme = theme;
+  $("#themeIcon").setAttribute("d", theme==="dark" ? "M12 4V2M12 22v-2M4.9 4.9 3.5 3.5M20.5 20.5l-1.4-1.4M4 12H2M22 12h-2M4.9 19.1l-1.4 1.4M20.5 3.5l-1.4 1.4M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z" : "M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z");
+  document.querySelector('meta[name="theme-color"]').content = theme==="dark" ? "#121315" : "#F5F6F3";
+}
+$("#theme").addEventListener("click", () => { theme = theme==="dark" ? "light" : "dark"; store.set("bt-theme", theme); applyTheme(); });
+
+/* ---------- player ---------- */
+const dlg = $("#player"), pl = $("#pl");
+function play(w){
+  pl.querySelectorAll("video,iframe,.want").forEach(n => n.remove());
+  pl.className = "pl " + (w.v ? "v" : "h");
+  if (w.t){ const a = document.createElement("a"); a.className = "btn btn-wa want"; a.target = "_blank"; a.rel = "noopener"; a.textContent = t("want"); a.href = wa(t("want.msg") + "«" + (w.t[lang]||w.t.ru) + "»"); pl.appendChild(a); }
+  if (w.yt && !CAN_EMBED){ openExt("https://youtu.be/" + w.yt); return; }
+  let el;
+  if (w.yt){ el = document.createElement("iframe"); el.src = "https://www.youtube-nocookie.com/embed/" + w.yt + "?autoplay=1&rel=0"; el.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen"; el.allowFullscreen = true; }
+  else { el = document.createElement("video"); el.src = w.file; el.controls = true; el.autoplay = true; el.playsInline = true; el.poster = w.poster; }
+  pl.appendChild(el);
+  if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open","");
+}
+function closePlayer(){ pl.querySelectorAll("video,iframe").forEach(n => n.remove()); dlg.close ? dlg.close() : dlg.removeAttribute("open"); }
+$("#plx").addEventListener("click", closePlayer);
+dlg.addEventListener("click", e => { if (e.target === dlg) closePlayer(); });
+dlg.addEventListener("close", () => pl.querySelectorAll("video,iframe").forEach(n => n.remove()));
+
+/* ---------- film strip ---------- */
+function buildStrip(){
+  const r = $("#reel"); r.innerHTML = "";
+  const top = WORKS.filter(w => w.top), base = top.length ? top : WORKS;
+  const list = [...base, ...base];
+  list.forEach((w,i) => {
+    const b = document.createElement("button");
+    b.className = "frame " + (w.v ? "v" : "h");
+    if (i >= base.length) b.tabIndex = -1, b.setAttribute("aria-hidden","true");
+    b.innerHTML = `<video src="${w.loop}" poster="${w.poster}" muted loop playsinline autoplay preload="metadata"></video><span class="cap">${w.t[lang]||w.t.ru}</span>`;
+    b.addEventListener("click", () => play(w));
+    r.appendChild(b);
+  });
+}
+
+/* ---------- directions ---------- */
+function buildDirs(){
+  $("#dirs").innerHTML = DIRS.map(d => `
+    <div class="dir" id="${d.id}" style="--c:${d.c}">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${d.icon}</svg></div>
+      <div><h3>${t("d."+d.seg+".t")}</h3><p>${t("d."+d.seg+".p")}</p><p class="offer">${t("d."+d.seg+".o")}</p></div>
+      <div class="tags">${t("d."+d.seg+".l").map(x=>`<span>${x}</span>`).join("")}</div>
+      <div class="side">
+        <a class="btn btn-wa want" target="_blank" rel="noopener" href="${wa(t("d."+d.seg+".m"))}">${t("want")}</a>
+        <div class="minis">${WORKS.map((w,i)=>[w,i]).filter(([w])=>w.seg===d.seg).slice(0,3).map(([w,i])=>`<button data-w="${i}" aria-label="${(w.t[lang]||w.t.ru).replace(/"/g,"")}"><img src="${w.poster}" alt="" loading="lazy"></button>`).join("")}</div>
+        <a class="go" href="#raboty" data-f="${d.seg}">${t("d.go")} (${WORKS.filter(w=>w.seg===d.seg).length})</a>
+      </div>
+    </div>`).join("");
+  $$("#dirs .minis button").forEach(b => b.addEventListener("click", () => play(WORKS[+b.dataset.w])));
+  $$("#dirs .go").forEach(a => a.addEventListener("click", () => { filter = a.dataset.f; buildWorks(); }));
+}
+
+function buildPick(){
+  $("#pick").innerHTML = DIRS.map(d => `<a href="#${d.id}" data-f="${d.seg}" style="--c:${d.c}"><b>${t("d."+d.seg+".t")}</b><span>${t("d."+d.seg+".h")}</span><i>${t("pick.go")} →</i></a>`).join("");
+  $$("#pick a").forEach(a => a.addEventListener("click", () => { filter = a.dataset.f; buildWorks(); const el = document.getElementById(a.getAttribute("href").slice(1)); if (el){ el.classList.remove("hl"); void el.offsetWidth; el.classList.add("hl"); } }));
+}
+
+/* ---------- works ---------- */
+function buildWorks(){
+  $("#filters").innerHTML = ["all","ads","memory","edu","motion"].map(f => `<button data-f="${f}" aria-pressed="${f===filter}">${t("flt."+f)}</button>`).join("");
+  const g = $("#grid"); g.innerHTML = "";
+  WORKS.filter(w => filter==="all" || w.seg===filter).forEach(w => {
+    const c = document.createElement("button");
+    c.className = "card" + (w.v ? "" : " wide"); c.style.setProperty("--c", SEGC[w.seg]);
+    c.innerHTML = `<div class="media"><img src="${w.poster}" alt="" loading="lazy"><video muted loop playsinline preload="none" data-src="${w.loop}"></video><span class="play">${PLAY}</span></div>
+      <div class="meta"><div class="k">${t("flt."+w.seg)}</div><h3>${w.t[lang]||w.t.ru}</h3><div class="d">${w.d[lang]||w.d.ru}</div></div>`;
+    const v = c.querySelector("video");
+    const start = () => { if(!v.src) v.src = v.dataset.src; v.play().catch(()=>{}); };
+    const stop = () => { v.pause(); };
+    c.addEventListener("mouseenter", start); c.addEventListener("mouseleave", stop);
+    c.addEventListener("focus", start); c.addEventListener("blur", stop);
+    c.addEventListener("click", () => play(w));
+    c._start = start; c._stop = stop;
+    g.appendChild(c);
+  });
+  ["memory","edu"].forEach(s => {
+    if (filter!=="all" && filter!==s) return;
+    const a = document.createElement("div"); a.className = "ask"; a.style.setProperty("--c", SEGC[s]);
+    a.innerHTML = `<div><div class="k" style="color:${SEGC[s]};font-weight:600;font-size:13px">${t("flt."+s)}</div><h3 style="margin-top:6px">${t("ask."+s+".t")}</h3><p style="margin-top:8px">${t("ask."+s+".p")}</p></div>
+      <a class="btn btn-wa" target="_blank" rel="noopener" href="${wa(t("ask.msg") + t("flt."+s))}">${t("ask.btn")}</a>`;
+    g.appendChild(a);
+  });
+  $$("#filters button").forEach(b => b.addEventListener("click", () => { filter = b.dataset.f; buildWorks(); }));
+  // на телефонах без наведения — превью играют, когда видны на экране
+  if (!matchMedia("(hover:hover)").matches && "IntersectionObserver" in window){
+    const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? e.target._start() : e.target._stop()), {threshold:.6});
+    $$("#grid .card").forEach(c => io.observe(c));
+  }
+}
+
+/* ---------- before/after ---------- */
+(function(){ const ba = $("#ba"), r = ba.querySelector("input");
+  r.addEventListener("input", () => ba.style.setProperty("--p", r.value + "%")); })();
+
+/* ---------- calculator ---------- */
+function calc(){
+  const m = parseFloat($("#cMin").value);
+  $("#cMinOut").textContent = String(m).replace(".", ",");
+  let per = CONFIG.pricePerMin + ($("#cSubs").checked ? CONFIG.subsPerMin : 0) + ($("#cVoice").checked ? CONFIG.voicePerMin : 0);
+  const total = Math.max(CONFIG.minOrder, Math.round(per * m / 500) * 500);
+  $("#cTotal").textContent = "≈ " + fmt(total);
+  return total;
+}
+["cMin","cSubs","cVoice","cType"].forEach(id => $("#"+id).addEventListener("input", calc));
+$("#cSend").addEventListener("click", () => {
+  const total = calc(), lines = [t("wa.hi"), "", t("wa.type") + ": " + $("#cType").value, t("wa.len") + ": " + $("#cMinOut").textContent + " мин"];
+  if ($("#cSubs").checked) lines.push("+ " + t("calc.subs"));
+  if ($("#cVoice").checked) lines.push("+ " + t("calc.voice"));
+  lines.push(t("wa.calc") + ": ≈ " + fmt(total));
+  track("wa_click"); track("wa_calc");
+  openExt(wa(lines.join("\n")));
+});
+
+/* ---------- brief form ---------- */
+$("#brief").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = id => $("#"+id).value.trim(), lines = [t("wa.hi"), "", t("wa.type") + ": " + v("fType")];
+  if (v("fLen")) lines.push(t("wa.len") + ": " + v("fLen"));
+  if (v("fDate")) lines.push(t("wa.date") + ": " + v("fDate"));
+  if (v("fDesc")) lines.push(t("wa.desc") + ": " + v("fDesc"));
+  track("wa_click"); track("wa_form");
+  openExt(wa(lines.join("\n")));
+});
+
+/* ---------- i18n ---------- */
+function apply(){
+  document.documentElement.lang = lang;
+  $$("[data-i]").forEach(el => { const v = t(el.dataset.i); if (typeof v === "string") { if (v.includes("<")) el.innerHTML = v; else el.textContent = v; } });
+  $$("[data-ph]").forEach(el => el.placeholder = t(el.dataset.ph));
+  $$("[data-alt]").forEach(el => el.alt = t(el.dataset.alt));
+  $$("[data-list]").forEach(el => el.innerHTML = t(el.dataset.list).map(x => `<li>${el.hasAttribute("data-check") ? CHECK : ""}<span>${x}</span></li>`).join(""));
+  $$(".seg button[data-lang]").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang===lang));
+  $("#steps").innerHTML = t("steps").map((s,i) => `<div class="step"><div class="n">${i+1}</div><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("");
+  $("#faqList").innerHTML = t("faq").map(([q,a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join("");
+  ["#cType","#fType"].forEach(id => { const s=$(id), k=s.selectedIndex; s.innerHTML = t("types").map(x=>`<option>${x}</option>`).join(""); if(k>0) s.selectedIndex=k; });
+  $("#cSubsP").textContent = "+" + fmt(CONFIG.subsPerMin).replace(" ₸","") + " " + t("calc.per");
+  $("#cVoiceP").textContent = "+" + fmt(CONFIG.voicePerMin).replace(" ₸","") + " " + t("calc.per");
+  $$(".js-wa").forEach(a => { a.href = wa(t("wa.hi")); a.target = "_blank"; a.rel = "noopener"; });
+  buildStrip(); buildPick(); buildDirs(); buildWorks(); calc();
+}
+$$(".seg button[data-lang]").forEach(b => b.addEventListener("click", () => { lang = b.dataset.lang; store.set("bt-lang", lang); apply(); }));
+
+/* ---------- menu, links, extras ---------- */
+const mnav = $("#mnav"), burger = $("#burger");
+burger.addEventListener("click", () => { const o = mnav.classList.toggle("open"); burger.setAttribute("aria-expanded", o); });
+mnav.addEventListener("click", e => { if (e.target.tagName === "A") { mnav.classList.remove("open"); burger.setAttribute("aria-expanded", false); } });
+$$(".js-tg").forEach(a => { a.href = "https://t.me/" + CONFIG.telegram; a.target = "_blank"; a.rel = "noopener"; });
+if (CONFIG.instagram) $$(".js-ig").forEach(a => { a.hidden = false; a.href = "https://instagram.com/" + CONFIG.instagram; a.target = "_blank"; a.rel = "noopener"; });
+$("#phoneTxt").textContent = CONFIG.phoneText;
+if (!CONFIG.calculator) $("#calc").remove(), document.querySelector(".price").style.gridTemplateColumns = "1fr";
+if (CONFIG.showreel){ const b = $("#reelBtn"); b.hidden = false; b.addEventListener("click", () => play({yt:CONFIG.showreel, v:true})); }
+$("#yr").textContent = new Date().getFullYear();
+try { if (window.QRCode) new QRCode($("#qr"), {text: location.href.split("#")[0], width: 92, height: 92, correctLevel: QRCode.CorrectLevel.M}); } catch(e) {}
+if (CONFIG.metrika){
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+  ym(Number(CONFIG.metrika), "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true});
+}
+// открыть нужное направление по ссылке вида  сайт/#eske-alu
+const seg0 = DIRS.find(d => "#"+d.id === location.hash); if (seg0) filter = seg0.seg;
+
+applyTheme(); apply();
+</script>
+</body>
+</html>
