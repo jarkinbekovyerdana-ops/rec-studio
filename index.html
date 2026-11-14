@@ -254,6 +254,15 @@ details[open] summary{color:var(--rec)}
 .total{display:flex;justify-content:space-between;align-items:baseline;margin:22px 0 16px}
 .total b{font-family:var(--disp);font-size:34px;letter-spacing:-.02em}
 .calc .note{font-size:13px;color:var(--muted);margin-top:12px}
+.plan{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin:-6px 0 16px;font-size:15px}
+.plan .ptitle{font-weight:600}
+.plan .pmeta{color:var(--muted);font-size:14px;margin-top:2px}
+.plan .pmeta b{color:var(--ink)}
+.plan .pk{font-size:13px;color:var(--muted);margin-top:12px}
+.plan ol{margin:6px 0 0 20px;display:grid;gap:4px}
+.plan .tl{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.plan .tl span{font-size:12px;padding:3px 9px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-variant-numeric:tabular-nums}
+.plan .tl span:last-child{border-color:var(--rec);color:var(--rec)}
 
 /* process */
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:40px;border-top:2px solid var(--ink)}
@@ -476,6 +485,7 @@ dialog::backdrop{background:rgba(10,10,12,.82);backdrop-filter:blur(4px)}
         <label class="chk"><input type="checkbox" id="cSubs"><span><span data-i="calc.subs"></span><small id="cSubsP"></small></span></label>
         <label class="chk"><input type="checkbox" id="cVoice"><span><span data-i="calc.voice"></span><small id="cVoiceP"></small></span></label>
         <div class="total"><span data-i="calc.total"></span><b id="cTotal">12 000 ₸</b></div>
+        <div class="plan" id="cPlan"></div>
         <button class="btn btn-rec" id="cSend" style="width:100%"><span data-i="calc.send"></span></button>
         <p class="note" data-i="calc.note"></p>
       </div>
@@ -677,6 +687,12 @@ ru:{
  "price.inc":["Монтаж, склейка, переходы","Музыка и цветокоррекция","Базовая анимация текста","2 правки после сдачи"],
  "calc.t":"Примерный расчёт","calc.type":"Что за видео","calc.min":"Длительность, мин","calc.subs":"Субтитры","calc.voice":"ИИ-озвучка (русский, английский)",
  "calc.total":"Примерно","calc.send":"Отправить расчёт в WhatsApp","calc.note":"Это ориентир. Итоговая цена зависит от объёма материалов и задачи.","calc.per":"₸ за минуту",
+ "plan.days":"Срок","plan.d1":"1 день","plan.d2":"1–2 дня","plan.d3":"до 3 дней","plan.steps":"Этапы","plan.tl":"Таймлайн","plan.min":"мин",
+ "plan.ads":["Хук в первые 3 секунды","Монтаж под ритм","Субтитры и плашки","Цвет и звук"],
+ "plan.memory":["Собираем фото и видео","Порядок и музыка","Титры с датами","Мягкие переходы"],
+ "plan.edu":["Чистка звука","Вырезаем паузы и оговорки","Титры и акценты","Нарезка клипов в Reels"],
+ "plan.motion":["Раскадровка","Анимация и 3D-текст","ИИ-видео или озвучка","Финальный рендер"],
+ "plan.other":["Обсуждаем задачу","Монтаж","2 бесплатные правки","Готовый файл"],
  "types":["Реклама / креатив","Еске алу / юбилей","Урок или подкаст","Моушн / ИИ-видео","Другое"],
  "proc.t":"Как мы работаем",
  "steps":[["Заявка","Пишете в WhatsApp, что нужно и к какой дате."],["ТЗ и файлы","Согласуем задачу, цену и срок. Файлы удобно прислать в Telegram."],["Монтаж","Обычно 1–2 дня, большие проекты — до 3 дней."],["Правки","Две правки бесплатно после сдачи по ТЗ."],["Готово","Отправляем файл в нужном формате."]],
@@ -723,6 +739,12 @@ kk:{
  "price.inc":["Монтаж, желімдеу, ауысулар","Музыка және түс түзету","Мәтіннің негізгі анимациясы","Тапсырғаннан кейін 2 түзету"],
  "calc.t":"Шамамен есеп","calc.type":"Қандай бейне","calc.min":"Ұзақтығы, мин","calc.subs":"Субтитрлер","calc.voice":"ЖИ-дауыс (орысша, ағылшынша)",
  "calc.total":"Шамамен","calc.send":"Есепті WhatsApp-қа жіберу","calc.note":"Бұл — бағдар. Соңғы баға материал көлемі мен тапсырмаға байланысты.","calc.per":"₸ / минут",
+ "plan.days":"Мерзімі","plan.d1":"1 күн","plan.d2":"1–2 күн","plan.d3":"3 күнге дейін","plan.steps":"Кезеңдер","plan.tl":"Таймлайн","plan.min":"мин",
+ "plan.ads":["Алғашқы 3 секундта назар аудару","Ырғаққа монтаж","Субтитрлер мен жазулар","Түс пен дыбыс"],
+ "plan.memory":["Фото мен бейнені жинаймыз","Реті мен әуені","Күндері бар титрлер","Жұмсақ ауысулар"],
+ "plan.edu":["Дыбысты тазалау","Үзілістер мен қателерді қиямыз","Титрлер мен екпіндер","Reels-ке клиптер"],
+ "plan.motion":["Раскадровка","Анимация және 3D-мәтін","ЖИ-бейне немесе дауыс","Соңғы рендер"],
+ "plan.other":["Тапсырманы талқылаймыз","Монтаж","2 тегін түзету","Дайын файл"],
  "types":["Жарнама / креатив","Еске алу / мерейтой","Сабақ немесе подкаст","Моушн / ЖИ-бейне","Басқа"],
  "proc.t":"Қалай жұмыс істейміз",
  "steps":[["Өтінім","WhatsApp-қа не керек екенін және қай күнге екенін жазасыз."],["ТТ және файлдар","Тапсырманы, бағаны, мерзімді келісеміз. Файлдарды Telegram арқылы жіберген ыңғайлы."],["Монтаж","Әдетте 1–2 күн, үлкен жобалар — 3 күнге дейін."],["Түзетулер","ТТ бойынша тапсырғаннан кейін екі түзету тегін."],["Дайын","Файлды қажетті форматта жібереміз."]],
@@ -769,6 +791,12 @@ en:{
  "price.inc":["Editing, cuts, transitions","Music and colour grading","Basic text animation","2 revisions after delivery"],
  "calc.t":"Quick estimate","calc.type":"Type of video","calc.min":"Length, min","calc.subs":"Subtitles","calc.voice":"AI voice-over (Russian, English)",
  "calc.total":"About","calc.send":"Send estimate via WhatsApp","calc.note":"This is a guide. The final price depends on the materials and the task.","calc.per":"₸ per minute",
+ "plan.days":"Deadline","plan.d1":"1 day","plan.d2":"1–2 days","plan.d3":"up to 3 days","plan.steps":"Steps","plan.tl":"Timeline","plan.min":"min",
+ "plan.ads":["Hook in the first 3 seconds","Cut to the beat","Subtitles and captions","Color and sound"],
+ "plan.memory":["Collect photos and videos","Order and music","Titles with dates","Soft transitions"],
+ "plan.edu":["Clean up the audio","Cut pauses and slips","Titles and highlights","Clips for Reels"],
+ "plan.motion":["Storyboard","Animation and 3D text","AI video or voice-over","Final render"],
+ "plan.other":["Discuss the task","Editing","2 free revisions","Final file"],
  "types":["Ad / creative","Memorial / anniversary","Lesson or podcast","Motion / AI video","Other"],
  "proc.t":"How we work",
  "steps":[["Request","Message us on WhatsApp: what you need and by when."],["Brief & files","We agree on the task, price and deadline. Send files via Telegram."],["Editing","Usually 1–2 days, bigger projects up to 3 days."],["Revisions","Two free revisions after delivery to the brief."],["Done","You get the file in the format you need."]],
@@ -919,6 +947,88 @@ function buildWorks(){
 (function(){ const ba = $("#ba"), r = ba.querySelector("input");
   r.addEventListener("input", () => ba.style.setProperty("--p", r.value + "%")); })();
 
+/* ---------- план проекта в калькуляторе ----------
+   Лабораторная №10: if/else, switch, for, while, функции с параметрами и return, стрелочные функции */
+
+// Обычная функция с параметрами и return: название проекта
+function getProjectTitle(typeName, minutes) {
+  return typeName + " · " + minutes + " " + t("plan.min");
+}
+
+// Стрелочная функция: сколько этапов в списке
+const getStepCount = (stepList) => {
+  return stepList.length;
+};
+
+// Стрелочная функция: секунды -> "1:05"
+const toTime = (sec) => Math.floor(sec / 60) + ":" + String(sec % 60).padStart(2, "0");
+
+// switch: по типу видео выбираем ключ этапов и шаг таймлайна (в секундах)
+function getVideoPlan(typeIndex) {
+  let key, step;
+  switch (typeIndex) {
+    case 0: key = "ads";    step = 15; break;  // реклама — короткие сцены
+    case 1: key = "memory"; step = 30; break;  // еске алу / юбилей
+    case 2: key = "edu";    step = 60; break;  // урок или подкаст
+    case 3: key = "motion"; step = 10; break;  // моушн / ИИ-видео
+    default: key = "other"; step = 30;
+  }
+  return { steps: t("plan." + key), step: step };
+}
+
+// if / else: срок зависит от длительности (1–2 дня, максимум 3)
+function getDeadline(minutes) {
+  if (minutes <= 3) {
+    return t("plan.d1");
+  } else if (minutes <= 10) {
+    return t("plan.d2");
+  } else {
+    return t("plan.d3");
+  }
+}
+
+// while: отметки таймлайна 0:00, 0:15, 0:30 … и конец ролика (не больше 8 отметок)
+function buildTimeline(minutes, stepSec) {
+  const total = Math.round(minutes * 60), marks = [];
+  let sec = 0;
+  while (sec < total && marks.length < 7) {
+    marks.push(toTime(sec));
+    sec = sec + stepSec;
+  }
+  if (sec < total) {
+    marks.push("…");   // отметок много — показываем только начало и конец
+  }
+  marks.push(toTime(total));
+  return marks;
+}
+
+function renderPlan(minutes) {
+  const box = $("#cPlan");
+  if (!box) return;
+  const typeName = $("#cType").value;
+  const plan = getVideoPlan($("#cType").selectedIndex);
+  const marks = buildTimeline(minutes, plan.step);
+
+  // for: этапы работы
+  let stepsHtml = "";
+  for (let i = 0; i < plan.steps.length; i++) {
+    stepsHtml += "<li>" + plan.steps[i] + "</li>";
+  }
+  // for: отметки таймлайна
+  let tlHtml = "";
+  for (let i = 0; i < marks.length; i++) {
+    tlHtml += "<span>" + marks[i] + "</span>";
+  }
+
+  box.innerHTML =
+    '<div class="ptitle">' + getProjectTitle(typeName, String(minutes).replace(".", ",")) + "</div>" +
+    '<div class="pmeta">' + t("plan.days") + ": <b>" + getDeadline(minutes) + "</b></div>" +
+    '<div class="pk">' + t("plan.steps") + " (" + getStepCount(plan.steps) + ")</div>" +
+    "<ol>" + stepsHtml + "</ol>" +
+    '<div class="pk">' + t("plan.tl") + "</div>" +
+    '<div class="tl">' + tlHtml + "</div>";
+}
+
 /* ---------- calculator ---------- */
 function calc(){
   const m = parseFloat($("#cMin").value);
@@ -926,6 +1036,7 @@ function calc(){
   let per = CONFIG.pricePerMin + ($("#cSubs").checked ? CONFIG.subsPerMin : 0) + ($("#cVoice").checked ? CONFIG.voicePerMin : 0);
   const total = Math.max(CONFIG.minOrder, Math.round(per * m / 500) * 500);
   $("#cTotal").textContent = "≈ " + fmt(total);
+  renderPlan(m);
   return total;
 }
 ["cMin","cSubs","cVoice","cType"].forEach(id => $("#"+id).addEventListener("input", calc));
@@ -933,6 +1044,7 @@ $("#cSend").addEventListener("click", () => {
   const total = calc(), lines = [t("wa.hi"), "", t("wa.type") + ": " + $("#cType").value, t("wa.len") + ": " + $("#cMinOut").textContent + " мин"];
   if ($("#cSubs").checked) lines.push("+ " + t("calc.subs"));
   if ($("#cVoice").checked) lines.push("+ " + t("calc.voice"));
+  lines.push(t("plan.days") + ": " + getDeadline(parseFloat($("#cMin").value)));
   lines.push(t("wa.calc") + ": ≈ " + fmt(total));
   track("wa_click"); track("wa_calc");
   openExt(wa(lines.join("\n")));
